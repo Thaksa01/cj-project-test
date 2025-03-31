@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Test Coding CJ-Project (UI Engineer)
 
-## Getting Started
+This project have 3 components, Input, Tags and List By use React Nextjs Typescripts
+## Features
 
-First, run the development server:
+# - Input
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+| Paramater | type | example |
+| ------ | ------ | ------|
+| onAddTag | function | () => void |
+| children | React.ReactNode | <div/> |
+
+```js
+import TagInput from "./components/input";
+
+<TagInput 
+    onAddTag={addTag} 
+    children={<Tag tags={tags} removeTag={removeTag} />}
+/>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# - Tags
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Paramater | type | example |
+| ------ | ------ | ------|
+| tags | TagData[] | [{ text: "test1", count: 0}] |
+| removeTag | function | () => void |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```js
+import Tag from "./components/tag";
 
-## Learn More
+<Tag tags={tags} removeTag={removeTag} />
+```
 
-To learn more about Next.js, take a look at the following resources:
+# - List
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Paramater | type | example |
+| ------ | ------ | ------|
+| dataList | string[] | ["red", "green", "blue"] |
+| removeTag | function | () => void |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```js
+import List from "./components/list";
 
-## Deploy on Vercel
+<List dataList={colors} title={"Colors"}/>
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Step To Run project
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### firstly, this project want to install dependencies
+
+```sh
+npm install
+```
+### or (Yarn)
+```sh
+yarn install
+```
+
+### For Run Project
+```sh
+npm run build && npm run start
+or
+npm run build; npm run start
+```
+if you want start on dev
+```sh
+npm run dev
+```
+
+now i see port to run  port 
+```sh
+http://localhost:3000   127.0.0.1:3000
+```
+
+### For Run test Project
+```sh
+npm run test
+```
+### or (Yarn)
+```sh
+yarn test
+```
+
+
+## Contact me
+
+
+| Plugin | README |
+| ------ | ------ |
+| Linkedin | https://www.linkedin.com/in/thaksa-nanan-061661236/
+| phone| 0826975094
